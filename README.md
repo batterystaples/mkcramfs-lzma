@@ -9,24 +9,28 @@ Modifications have been made so that it will compile on modern systems - this ha
 This program is still being tested - it seems to have some problems processing
 files over the block size. However, it is also possible that it works correctly
 and I am only thinking that there are errors due to testing with uncramfs-lzma,
-which also has (link!) problems processing files greater than the block size.
+which also has [problems processing files greater than the block size](https://github.com/rampageX/firmware-mod-kit/issues/137).
 Given that both programs were produced from a very similar source, I find it
 more likely that mkcramfs-lzma and uncramfs-lzma share a similar bug, but it
 will be hard to debug mkcramfs-lzma until uncramfs-lzma is fixed.
 
-It's worth noting that the (link!) Audiocodes MP264 is able to read archives created by
+It's worth noting that the [Audiocodes MP264](http://www.batterystapl.es/2017/12/experimenting-with-audiocodes-mp264.html) is able to read archives created by
 mkcramfs-lzma, even in some cases where uncramfs-lzma can't, but I have no easy
 way of knowing if it is reading them correctly.
 
 To compile this tool, you will need the header files for zlib and libstdc++-7.
 To install these on Debian systems, run the command:
+
 $ sudo apt-get install zlib1g-dev libstdc++-7-dev
+
 You will also need a compiler and build tools, if you don't have these already.
 You can obtain these with the command:
+
 $ sudo apt-get install build-essential
 
 Once you have installed the packages, building is as simple as executing the
 command:
+
 $ make
 
 You will see some warnings, but as far as I am aware, these do not impact the
