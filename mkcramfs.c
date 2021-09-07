@@ -33,6 +33,7 @@
 #include <errno.h>
 #include <string.h>
 #include <stdarg.h>
+#include <sys/sysmacros.h>
 #include "cramfs_fs.h"
 #include <zlib.h>
 #include "lzma-rg/SRC/lzma_encode.h"
